@@ -17,6 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['register'=>false]);
+
+Route::group(['as' => 'customer.', 'prefix'=> 'customer', 'namespace' => 'Cusotomer','middleware' =>['auth','customer']],function(){
+    Route::get('dashboard', 'DashboardController@index')-> name('dashboard');;
+});
+
+Route::group(['as' => 'agent.', 'prefix'=> 'agent', 'namespace' => 'Agent','middleware' =>['auth','agent']],function(){
+    Route::get('dashboard', 'DashboardController@index')-> name('dashboard');;
+});
+
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
