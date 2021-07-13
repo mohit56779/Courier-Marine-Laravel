@@ -48,8 +48,8 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{route('customer.dashboard')}}" class="nav-link {{ isActive('customer/dashboard')}}">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="{{route('customer.parcel.view')}}" class="nav-link {{ isActive('parcel*')}}">
+              <i class="nav-icon fas fa-truck"></i>
               <p>
                 Parcel
          
