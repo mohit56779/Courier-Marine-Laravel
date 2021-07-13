@@ -42,8 +42,9 @@ class LoginController extends Controller
 
         }
 
-        else{
+        else {
             $this->redirectTo = route('agent.dashboard');
+
         }
 
         $this->middleware('guest')->except('logout');
