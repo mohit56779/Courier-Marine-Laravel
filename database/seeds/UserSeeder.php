@@ -26,5 +26,21 @@ class UserSeeder extends Seeder
             'username' => 'agent',
             'password' => bcrypt('password'),
         ]);
+
+        DB :: table('users')->insert([
+            'role_id' => 1,
+            'name' => 'John Doe 2',
+            'email' => 'john2@john.com',
+            'username' => 'customer2',
+            'password' => bcrypt('password'),
+        ]);
+
+        DB :: table('users')->insert([
+            'role_id' => 2,
+            'name' => 'Jane Doe 2',
+            'email' => 'jane2@jane.com',
+            'username' => 'agent2',
+            'password' => bcrypt('password'),
+        ]);
     }
 }

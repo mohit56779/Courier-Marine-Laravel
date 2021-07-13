@@ -4,32 +4,25 @@
 @endpush
 @section('content')
 <div class="col-12">
-            <!-- Default box -->
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Title</h3>
+            <!-- fetch data from DB -->
+            @foreach($parcels as $parcel)
 
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                Start creating your amazing application!
-              </div>
-              <!-- /.card-body -->
-              <div class="card-footer">
-                Footer
-              </div>
-              <!-- /.card-footer-->
+          <div class="card">
+            <div class="card-header">
+            Delivery Schedules For {{$parcel->pickup_date}}
             </div>
-            <!-- /.card -->
+            <div class="card-body">
+              <p class="card-text">
+              <strong> Pick up Location </strong> {{$parcel->pickup_address}}
+                <br>
+                <strong> Drop off Location </strong> {{$parcel->drop_off_address}}
+                <br>
+                <strong> Status </strong> {{$parcel->status}}</p>
+              
+            </div>
           </div>
 
+            @endforeach
 @stop
 @push('js')
 @endpush
