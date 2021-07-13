@@ -21,9 +21,9 @@
 <!-- Site wrapper -->
 <div class="wrapper">
 
-@include('admin.layouts.inc.navbar')
+@include('customer.layouts.inc.navbar')
 
-@include('admin.layouts.inc.sidebar')
+@include('customer.layouts.inc.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

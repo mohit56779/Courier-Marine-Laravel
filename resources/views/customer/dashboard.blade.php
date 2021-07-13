@@ -1,3 +1,8 @@
+@extends('customer.layouts.master')
+@section('title','Dashboard')
+@push('css')
+@endpush
+@section('content')
 <div class="col-12">
             <!-- Default box -->
             <div class="card">
@@ -24,3 +29,7 @@
             </div>
             <!-- /.card -->
           </div>
+
+@stop
+@push('js')
+@endpush

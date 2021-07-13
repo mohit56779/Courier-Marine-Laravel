@@ -1,6 +1,7 @@
 <?php
 
-function adminAsset($assetLink){
-    
-    return asset('admin/',$assetLink);
+// helper function for isActive
+
+function isActive($url){
+    return Request::is($url)?'active': '';
 }

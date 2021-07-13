@@ -65,7 +65,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         
         // adding custom middlewares here for routes
-        'customer' => CustomerMiddleware::class,
-        'agent' => AgentMiddleware::class
+        'customer' => \App\Http\Middleware\CustomerMiddleware::class,
+        'agent' => \App\Http\Middleware\AgentMiddleware::class
     ];
 }
